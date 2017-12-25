@@ -1,0 +1,30 @@
+{
+  "name": "CarPoolAuth",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "npm-run-all --parallel open:src lint:watch",
+    "open:src": "babel-node --inspect server.js",
+    "lint": "node_modules/.bin/esw app",
+    "lint:watch": "npm run lint -- --watch"
+  },
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "body-parser": "^1.18.2",
+    "colors": "^1.1.2",
+    "express": "^4.16.2",
+    "mongoose": "^4.13.7",
+    "path": "^0.12.7",
+    "swagger-express": "^1.0.5"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-es2016": "^6.24.1",
+    "eslint": "^4.14.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-watch": "^3.1.3",
+    "npm-run-all": "^4.1.2"
+  }
+}
