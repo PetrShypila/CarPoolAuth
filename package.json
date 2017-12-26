@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "scripts": {
     "start": "npm-run-all --parallel open:src lint:watch",
-    "open:src": "babel-node --inspect server.js",
+    "open:src": "babel-node --inspect=9339 server.js",
     "lint": "node_modules/.bin/esw app",
     "lint:watch": "npm run lint -- --watch"
   },

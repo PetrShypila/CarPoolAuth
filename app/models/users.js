@@ -5,8 +5,8 @@ const {db} = config;
 
 const UserSchema = new db.Schema({
     username: String,
-    firstName: String,
-    lastName: String,
+    firstname: String,
+    lastname: String,
     email: String,
     phone: Number,
     password: String
