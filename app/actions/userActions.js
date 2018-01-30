@@ -16,15 +16,13 @@ export function findByUsername(req, res) {
       bcrypt.compare(password, user.password, (err, isValid) => {
         if (err) {
           res.status(500).json(err);
-        }
-
-        if (!isValid) {
+        } else if (!isValid) {
           logger.info(`User ${username} provided incorrect password`);
           res.status(401).end();
+        } else {
+          logger.info(`User ${username} successfully logged in`);
+          res.status(200).json(user);
         }
-
-        logger.info(`User ${username} successfully logged in`);
-        res.status(200).json(user);
       });
     }
   }).catch(err => {
