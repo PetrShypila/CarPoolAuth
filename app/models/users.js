@@ -20,4 +20,4 @@ UserSchema.methods.validPassword = function(password) {
     return bcrypt.compareSync(password, this.local.password);
 };
 
-export default db.model('user', UserSchema);
+export default db.model('authuser', UserSchema);
